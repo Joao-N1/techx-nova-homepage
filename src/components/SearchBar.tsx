@@ -10,12 +10,12 @@ const SearchBar = () => {
           <div className="flex w-full max-w-2xl">
             <Input
               type="text"
-              placeholder="Pesquisar consolas, smartphones, laptops..."
+              placeholder="Search consoles, smartphones, laptops..."
               className="rounded-r-none border-r-0 focus:ring-primary focus:border-primary"
             />
             <Button variant="default" className="rounded-l-none bg-gradient-primary hover:bg-primary-hover">
               <Search className="h-4 w-4" />
-              <span className="ml-2 hidden sm:inline">Pesquisar</span>
+              <span className="ml-2 hidden sm:inline">Search</span>
             </Button>
           </div>
         </div>

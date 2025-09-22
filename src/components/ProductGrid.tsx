@@ -9,46 +9,46 @@ const ProductGrid = () => {
   const products = [
     {
       image: consoleImage,
-      title: "Consola Gaming Pro",
-      description: "A mais recente consola de gaming com tecnologia de ponta e gráficos 4K ultra HD.",
-      price: "€399,99",
-      originalPrice: "€499,99",
+      title: "Gaming Console Pro",
+      description: "The latest gaming console with cutting-edge technology and ultra HD 4K graphics.",
+      price: "£399.99",
+      originalPrice: "£499.99",
       isOnSale: true,
     },
     {
       image: smartphoneImage,
-      title: "Smartphone Premium",
-      description: "Smartphone de última geração com câmara profissional e desempenho excecional.",
-      price: "€699,99",
-      originalPrice: "€799,99",
+      title: "Premium Smartphone",
+      description: "Latest generation smartphone with professional camera and exceptional performance.",
+      price: "£699.99",
+      originalPrice: "£799.99",
       isOnSale: true,
     },
     {
       image: laptopImage,
-      title: "Laptop Gaming Elite",
-      description: "Laptop poderoso para gaming e trabalho profissional com placa gráfica dedicada.",
-      price: "€1.299,99",
+      title: "Elite Gaming Laptop",
+      description: "Powerful laptop for gaming and professional work with dedicated graphics card.",
+      price: "£1,299.99",
     },
     {
       image: accessoriesImage,
-      title: "Kit Gaming Completo",
-      description: "Headset premium e controller profissional para a melhor experiência de gaming.",
-      price: "€149,99",
-      originalPrice: "€199,99",
+      title: "Complete Gaming Kit",
+      description: "Premium headset and professional controller for the ultimate gaming experience.",
+      price: "£149.99",
+      originalPrice: "£199.99",
       isOnSale: true,
     },
     {
       image: graphicsCardImage,
-      title: "Placa Gráfica RTX",
-      description: "Placa gráfica de alta performance para gaming 4K e trabalhos de criação.",
-      price: "€899,99",
+      title: "RTX Graphics Card",
+      description: "High-performance graphics card for 4K gaming and creative work.",
+      price: "£899.99",
     },
     {
       image: consoleImage,
-      title: "Consola Portátil",
-      description: "Gaming portátil com biblioteca de jogos integrada e ecrã HD de alta qualidade.",
-      price: "€279,99",
-      originalPrice: "€329,99",
+      title: "Portable Console",
+      description: "Portable gaming with integrated game library and high-quality HD screen.",
+      price: "£279.99",
+      originalPrice: "£329.99",
       isOnSale: true,
     },
   ];
@@ -58,10 +58,10 @@ const ProductGrid = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Produtos em Destaque
+            Featured Products
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Descubra a nossa seleção premium de tecnologia e gaming com os melhores preços do mercado
+            Discover our premium selection of technology and gaming products with the best market prices
           </p>
         </div>
         

@@ -12,24 +12,24 @@ const HeroBanner = () => {
       <div className="relative container mx-auto px-4 h-full flex items-center">
         <div className="max-w-2xl">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Promoção Especial
+            Special Promotion
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-6">
-            Até 50% de Desconto em Gaming e Tecnologia
+            Up to 50% Off Gaming & Technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:bg-primary-hover text-white font-semibold px-8 py-3 shadow-lg-custom"
             >
-              Ver Ofertas
+              View Offers
             </Button>
             <Button 
               variant="hero"
               size="lg" 
               className="px-8 py-3 shadow-lg-custom"
             >
-              Explorar Tudo
+              Explore All
             </Button>
           </div>
         </div>

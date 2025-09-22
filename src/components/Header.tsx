@@ -11,25 +11,25 @@ const Header = () => {
             <Button variant="ghost" size="sm" className="md:hidden text-primary-foreground hover:bg-white/20">
               <Menu className="h-5 w-5" />
             </Button>
-            <h1 className="text-2xl font-bold tracking-tight">TechX</h1>
+            <h1 className="text-2xl font-bold tracking-tight">CEX</h1>
           </div>
 
           {/* Navigation - Desktop */}
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#" className="text-primary-foreground hover:text-white/80 font-medium transition-smooth">
-              Início
+              Home
             </a>
             <a href="#" className="text-primary-foreground hover:text-white/80 font-medium transition-smooth">
-              Comprar
+              Buy
             </a>
             <a href="#" className="text-primary-foreground hover:text-white/80 font-medium transition-smooth">
-              Vender
+              Sell
             </a>
             <a href="#" className="text-primary-foreground hover:text-white/80 font-medium transition-smooth">
               Gaming
             </a>
             <a href="#" className="text-primary-foreground hover:text-white/80 font-medium transition-smooth">
-              Contactos
+              Contact
             </a>
           </nav>
 
