@@ -4,6 +4,7 @@ import smartphoneImage from "@/assets/smartphone.jpg";
 import laptopImage from "@/assets/laptop.jpg";
 import accessoriesImage from "@/assets/gaming-accessories.jpg";
 import graphicsCardImage from "@/assets/graphics-card.jpg";
+import controllerHeadphoneImage from "@/assets/gaming-controller-headphone.jpg";
 
 const ProductGrid = () => {
   const products = [
@@ -30,9 +31,9 @@ const ProductGrid = () => {
       price: "£1,299.99",
     },
     {
-      image: accessoriesImage,
-      title: "Complete Gaming Kit",
-      description: "Premium headset and professional controller for the ultimate gaming experience.",
+      image: controllerHeadphoneImage,
+      title: "Gaming Controller & Headphone Set",
+      description: "Premium wireless controller and professional gaming headphones combo pack.",
       price: "£149.99",
       originalPrice: "£199.99",
       isOnSale: true,
