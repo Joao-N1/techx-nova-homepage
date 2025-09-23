@@ -3,6 +3,7 @@ import SearchBar from "../components/SearchBar";
 import HeroBanner from "../components/HeroBanner";
 import ProductGrid from "../components/ProductGrid";
 import Footer from "../components/Footer";
+import Chatbot from "../components/Chatbot";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <HeroBanner />
       <ProductGrid />
       <Footer />
+      <Chatbot />
     </div>
   );
 };

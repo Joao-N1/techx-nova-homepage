@@ -27,9 +27,9 @@ const ProductCard = ({
           alt={title}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        {isOnSale && (
+        {isOnSale && originalPrice && (
           <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
-            OFERTA
+            -{Math.round(((parseFloat(originalPrice.replace('£', '')) - parseFloat(price.replace('£', ''))) / parseFloat(originalPrice.replace('£', ''))) * 100)}%
           </Badge>
         )}
       </div>
@@ -57,7 +57,7 @@ const ProductCard = ({
           className="w-full bg-gradient-primary hover:bg-primary-hover"
           size="sm"
         >
-          Ver Detalhes
+          View Details
         </Button>
       </CardFooter>
     </Card>
