@@ -1,7 +1,11 @@
 import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Footer = () => {
+interface FooterProps {
+  onFAQClick?: () => void;
+}
+
+const Footer = ({ onFAQClick }: FooterProps) => {
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-12">
@@ -45,7 +49,12 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Support</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">FAQ</a></li>
+              <li><button 
+                onClick={onFAQClick} 
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                FAQ
+              </button></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Warranties</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Returns</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Delivery</a></li>
