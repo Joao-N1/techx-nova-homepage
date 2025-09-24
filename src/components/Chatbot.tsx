@@ -35,7 +35,7 @@ const Chatbot = () => {
       {/* Chat Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-primary hover:bg-primary-hover shadow-lg z-50"
+        className="fixed bottom-6 right-24 h-14 w-14 rounded-full bg-primary hover:bg-primary-hover shadow-lg z-50"
         size="sm"
       >
         <MessageCircle className="h-6 w-6" />
@@ -43,7 +43,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-6 right-24 z-50">
           <Card className="w-80 h-96 shadow-xl">
             <CardHeader className="flex flex-row items-center justify-between p-4 bg-primary text-primary-foreground">
               <h3 className="font-semibold">CEX Support</h3>
