@@ -16,18 +16,27 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
-    <!-- Retell AI Chat Widget -->
-    <script
-        id="retell-widget"
-        src="https://dashboard.retellai.com/retell-widget.js"
-        type="module"
-        data-public-key="public_key_40928e154739af6132782"
-        data-agent-id="agent_50f5a74221c5162a4d3b061cff"
-    ></script>
+    <script>
+      console.log('Loading Retell AI widget...');
+      window.addEventListener('load', function() {
+        console.log('Page loaded, checking for Retell widget...');
+        setTimeout(function() {
+          if (window.RetellWidget) {
+            console.log('Retell widget loaded successfully');
+          } else {
+            console.log('Retell widget not found, trying alternative implementation');
+          }
+        }, 2000);
+      });
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Retell AI Chat Widget - Original user format -->
+    <retell-ai-chatbot agent-id="agent_50f5a74221c5162a4d3b061cff" public-key="public_key_40928e154739af6132782"></retell-ai-chatbot>
+    <script src="https://cdn.retellai.com/widget.js" async type="text/javascript"></script>
   </body>
 </html>
