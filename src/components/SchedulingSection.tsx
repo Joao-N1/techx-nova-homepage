@@ -2,19 +2,43 @@ import { useEffect } from "react";
 
 const SchedulingSection = () => {
   useEffect(() => {
-    // Load Cal.com embed script
-    const script = document.createElement("script");
-    script.src = "https://app.cal.com/embed/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // Cal inline embed initialization
+    (function (C: any, A: string, L: string) { 
+      let p = function (a: any, ar: any) { a.q.push(ar); }; 
+      let d = C.document; 
+      C.Cal = C.Cal || function () { 
+        let cal = C.Cal; 
+        let ar = arguments; 
+        if (!cal.loaded) { 
+          cal.ns = {}; 
+          cal.q = cal.q || []; 
+          d.head.appendChild(d.createElement("script")).src = A; 
+          cal.loaded = true; 
+        } 
+        if (ar[0] === L) { 
+          const api = function () { p(api, arguments); }; 
+          const namespace = ar[1]; 
+          api.q = api.q || []; 
+          if(typeof namespace === "string"){
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar); 
+          return;
+        } 
+        p(cal, ar); 
+      }; 
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    
+    (window as any).Cal("init", "30min", {origin:"https://app.cal.com"});
 
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
+    (window as any).Cal.ns["30min"]("inline", {
+      elementOrSelector:"#my-cal-inline-30min",
+      config: {"layout":"month_view"},
+      calLink: "joao-neves-ozvx1l/30min",
+    });
+
+    (window as any).Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   }, []);
 
   return (
@@ -31,11 +55,14 @@ const SchedulingSection = () => {
         
         <div className="max-w-4xl mx-auto">
           <div 
-            className="cal-embed bg-card rounded-lg shadow-lg overflow-hidden border border-border"
-            data-cal-link="joao-neves-ozvx1l/30min"
-            data-cal-config='{"layout":"month_view","theme":"light"}'
-            style={{ width: "100%", height: "600px", overflow: "scroll" }}
-          ></div>
+            className="bg-card rounded-lg shadow-lg overflow-hidden border border-border"
+            style={{ width: "100%", height: "600px" }}
+          >
+            <div 
+              style={{width:"100%",height:"100%",overflow:"scroll"}} 
+              id="my-cal-inline-30min"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
