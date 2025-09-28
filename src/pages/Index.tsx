@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import HeroBanner from "../components/HeroBanner";
 import ProductGrid from "../components/ProductGrid";
+import SchedulingSection from "../components/SchedulingSection";
 import Footer from "../components/Footer";
-
 import FAQ from "../components/FAQ";
 
 const Index = () => {
@@ -16,6 +16,7 @@ const Index = () => {
       <SearchBar />
       <HeroBanner />
       <ProductGrid />
+      <SchedulingSection />
       <Footer onFAQClick={() => setIsFAQOpen(true)} />
       
       <FAQ isOpen={isFAQOpen} onClose={() => setIsFAQOpen(false)} />
