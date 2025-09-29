@@ -31,23 +31,11 @@
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- Retell AI Chat Widget -->
-    <script>
-      // Load Retell widget script
-      const script = document.createElement('script');
-      script.src = 'https://cdn.retellai.com/widget.js';
-      script.onload = function() {
-        console.log('Retell widget script loaded');
-        // Create the chatbot element after script loads
-        const chatbot = document.createElement('retell-ai-chatbot');
-        chatbot.setAttribute('agent-id', 'agent_50f5a74221c5162a4d3b061cff');
-        chatbot.setAttribute('public-key', 'public_key_40928e154739af6132782');
-        document.body.appendChild(chatbot);
-        console.log('Retell chatbot element created and added');
-      };
-      script.onerror = function() {
-        console.error('Failed to load Retell widget script');
-      };
-      document.head.appendChild(script);
-    </script>
+    <script src="https://cdn.retellai.com/widget.js" async></script>
+    
+    <retell-ai-chatbot
+       agent-id="agent_50f5a74221c5162a4d3b061cff"
+       public-key="public_key_40928e154739af6132782">
+    </retell-ai-chatbot>
   </body>
 </html>
